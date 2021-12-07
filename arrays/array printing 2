@@ -1,0 +1,8 @@
+#include<iostream>
+using namespace std;
+int main(){
+    char ch[]="anu";
+    for(auto x : ch){
+        cout<<x<<" ";
+    }
+}
