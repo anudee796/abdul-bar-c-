@@ -1,0 +1,14 @@
+#include<iostream>
+#include<climits>
+#include<vector>
+using namespace std;
+int main(){
+    int arr[]={3,4,5,14,5,34};
+    int max=INT_MIN;
+    for(auto x:arr){
+        if(x>max){
+            max=x;
+        }
+    }
+    cout<<" max element is "<<max;
+}
