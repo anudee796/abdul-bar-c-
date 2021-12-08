@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int binary(int arr[],int n,int ele);
+int main(){
+    int arr[]={1,2,3,4,5,6,7};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    int ele;
+    cout<<"enter the element"<<endl;
+    cin>>ele;
+    int pos=binary(arr,n,ele); //array name gives the base address 
+    cout<<"found at "<<pos+1;
+}
+int binary(int arr[],int n,int ele){
+    int l=0,h=n-1;
+    while(l<=h){
+        int mid=(l+h)/2;
+        if(arr[mid]==ele){
+            return mid;
+        }else if(arr[mid]<ele){
+            l=mid+1;
+        }else{
+            h=mid-1;
+        }
+    }
+}
